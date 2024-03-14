@@ -1,0 +1,21 @@
+/* Estilo para o layout em três colunas */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+/* Limpa a flutuação após as colunas */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Estilo para o fieldset */
+fieldset {
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}

@@ -6,19 +6,18 @@
 <meta charset="utf-8" />
 <!--   <link href="ContatoEstilo.css" rel="stylesheet" media="all" />
     <script src="JavaScript1.js"></script>-->
-    <link rel="stylesheet" type="text/css" href="style.css"> 
-    <script src="index.js"></script>   
+    <link rel="stylesheet" type="text/css" href="cadastro.css"> 
+    <script src="cadastro.js"></script>   
 </head>
 
 <body>
-<script src="nav.js"></script>
+<script src="../Barra/nav.js"></script>
 <form name="meu_form">
 
-  <h1>Entre em contato</h1>
+  <h1>Cadastro de Aluno</h1>
 
   <!-- DADOS DE CONTATO -->
   <fieldset>
-    <legend>Fieldset com Três Colunas</legend>
     <div class="row">
         <div class="column">
               <!-- CONTATO DO ALUNO -->
@@ -26,7 +25,7 @@
             <input type="text" id="nomeCompleto" placeholder="Seu nome" required="required" name="nome" />
 
             <label for="dataNascimento">Data de Nascimento</label>
-            <input type="text" id="dataNascimento" placeholder="Sua data de nascimento" required="required" name="dataNascimento" />
+            <input type="text" id="dataNascimento" placeholder="dia/mês/ano" required="required" name="dataNascimento" />
 
             <label for="documento">Documento</label>
             <input type="text" id="documento" placeholder="Seu documento" required="required" name="documento" />
@@ -61,7 +60,6 @@
 
 <!-- ENDEREÇO -->
 <fieldset>
-    <legend>Fieldset com Três Colunas</legend>
     <div class="row">
         <div class="column">
             <label for="cep">CEP</label>

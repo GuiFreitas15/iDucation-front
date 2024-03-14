@@ -6,21 +6,19 @@ body {
 form {
     font-family: Verdana,Tahoma,sans-serif;
     font-size: 15px;
-    background-color: #CC3300;
+    background-color: #FFFFFF;
 }
 
 h1 {
     margin-bottom: 20px;
     margin-left: 20px;
-    color: #66FFFF;
-    text-shadow: 5px 5px 5px black;
+    color: #e24429;
 }
 
 input, textarea {
-    width: 200px;
-    padding: 10px;
+    width: 60%;
+    padding: 8px;
     color: black;
-    margin-left: 20px;
     margin-top: 10px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -48,15 +46,13 @@ input:hover, textarea:hover, input:focus, textarea:focus {
 }
 
 textarea {
-    width: 400px;
     height: 120px;
     line-height: 20px;
-    max-width: 400px;
 }
 
 form label {
     margin-left: 20px;
-    color: #FFFFFF;
+    color: #e24429;
     font-weight: bold;
 }
 
@@ -78,17 +74,13 @@ form label {
 /* Estilo para o fieldset */
 fieldset {
     border: 2px solid #ccc;
+    width: 100%;
     padding: 20px;
     margin-bottom: 20px;
 }
 
 /* Estilo para os campos de entrada */
-input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    margin: 5px 0;
-    box-sizing: border-box;
-}
+
 
 /* Estilo para as labels */
 label {
