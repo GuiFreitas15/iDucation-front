@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     navContainer.setAttribute('id', 'nav-container');
 
     // Fetch nav.html and include it
-    fetch("Iducation/iDucation-front/Barra/nav.html")
+    fetch("../Barra/nav.html")
         .then(response => response.text())
         .then(html => {
             navContainer.innerHTML = html;
