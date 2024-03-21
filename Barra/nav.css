@@ -1,21 +1,32 @@
 /* Estilo para o layout em três colunas */
 .column {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     float: left;
     width: 33.33%;
     padding: 0 10px;
     box-sizing: border-box;
 }
-
 /* Limpa a flutuação após as colunas */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
-
 /* Estilo para o fieldset */
 fieldset {
     border: 2px solid #ccc;
     padding: 20px;
     margin-bottom: 20px;
 }
+.column a {
+    color: gray;
+    text-decoration: none;
+}
+  a:hover {
+    color: black;
+    font-weight: bold;
+  }
+  a:active {
+    color: blue;
+  }
+

@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navContainer = document.createElement('div');
     navContainer.setAttribute('id', 'nav-container');
+    
 
     // Fetch nav.html and include it
     fetch("../Barra/nav.html")

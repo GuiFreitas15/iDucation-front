@@ -1,6 +1,9 @@
 body {
     padding: 0;
     margin: 0;
+    width: 100%;
+    padding: 0% 5%;
+    box-sizing: border-box;
 }
 
 form {
@@ -19,31 +22,18 @@ input, textarea {
     width: 60%;
     padding: 8px;
     color: black;
-    margin-top: 10px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border: 1px solid;
+    border: 1px solid rgb(236, 233, 233);
+    box-shadow: 4px 8px 15px 1px rgba(0, 0, 0, 0.2);
 }
 
 input:hover, textarea:hover, input:focus, textarea:focus {
-    border-color: #000066;
-    box-shadow: 5px 0px 9px #FFFF00;
-    background-color: #66FFFF;
+    background-color: rgb(247, 243, 243);
     color: black;
     font-weight: bold;
 }
 
-.enviar {
-    background-color: #66FFFF;
-    height: 40px;
-    width: 100px;
-    font-weight: bold;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border: 1px solid;
-    color: black;
-}
 
 textarea {
     height: 120px;
@@ -51,9 +41,10 @@ textarea {
 }
 
 form label {
-    margin-left: 20px;
     color: #e24429;
-    font-weight: bold;
+    margin: 10px 0px;
+    display: block;
+
 }
 
 /* Estilo para o layout em três colunas */
@@ -74,7 +65,6 @@ form label {
 /* Estilo para o fieldset */
 fieldset {
     border: 2px solid #ccc;
-    width: 100%;
     padding: 20px;
     margin-bottom: 20px;
 }
@@ -83,15 +73,25 @@ fieldset {
 
 
 /* Estilo para as labels */
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
 .container {
     width: 100%;
 }
 
-.divDireita {
+.divDidireita {
     float: right;
+}
+
+.enviar {
+    background-color: #E24429;
+    height: 40px;
+    width: 170px;
+    font-weight: bold;
+    border-radius: 30px;
+    color: white;
+}
+
+
+.foto_cadastro {
+    margin-top: 30px;
+    border-radius: 10%;
 }
