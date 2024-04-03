@@ -6,13 +6,13 @@
 <meta charset="utf-8" />
 <!--   <link href="ContatoEstilo.css" rel="stylesheet" media="all" />
     <script src="JavaScript1.js"></script>-->
-    <link rel="stylesheet" type="text/css" href="cadastro.css"> 
-    <script src="cadastro.js"></script>   
+    <link rel="stylesheet" type="text/css" href="cadastro.css">    
 </head>
 
 <body>
 <script src="../Barra/nav.js"></script>
-<form name="meu_form">
+<ul id="mensagens-erro"></ul>
+<form id="form-cadastro">
 
   <h1>Cadastro de Aluno</h1>
 
@@ -22,7 +22,7 @@
         <div class="column">
               <!-- CONTATO DO ALUNO -->
             <label for="nomeCompleto">Nome Completo</label>
-            <input type="text" id="nomeCompleto" placeholder="Seu nome" required="required" name="nome" />
+            <input type="text" id="nomeCompleto" placeholder="Seu nome" />
 
             <label for="dataNascimento">Data de Nascimento</label>
             <input type="text" id="dataNascimento" placeholder="dia/mês/ano" required="required" name="dataNascimento" />
@@ -77,20 +77,23 @@
 
             <label for="estado">Estado:</label>
             <select id="#estados" name="estados">
-                <option value="maca">São Paulo</option>
-                <option value="banana">Rio de Janeiro</option>
-                <option value="laranja">Minas Gerais</option>
-                <option value="uva">Espirito Santo</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="ES">Espirito Santo</option>
             </select>
         </div>
     </div>
 </fieldset>
 <div class="container">
     <div class="divDidireita">
-        <input type="submit" class="enviar" onclick="salvarDadosDoFormulario();" value="Continue" />
+        <button id="botaoEnviar" class="enviar">Salvar</button>
     </div>
 </div>
 
 </form>
+
+    <script src="cadastro.js"></script>
+
 </body>
 </html>
