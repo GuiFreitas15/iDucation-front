@@ -9,17 +9,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
         var aluno = obtemAlunoDoFormulario(form);
 
-        var erros = validaAluno(aluno);
+        var camposComErro = validaAluno(aluno);
 
-        if (erros.length > 0) {
-            exibeMensagensDeErro(erros);
+        if (camposComErro.length > 0) {
+            exibeMensagensDeErro(camposComErro);
     
             return;
         }
 
         form.reset();
 
-        var mensagemErro = document.querySelector("mensagens-erro");
         mensagemErro.innerHTML = "";
     });
 
@@ -46,29 +45,42 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function validaAluno(aluno){
-        var erros = [];
+        var camposComErro = [];
 
         var campos = ["nomeCompleto", "dataNascimento", "documento", "telefone", "email", "nomeCompletoResponsavel", "documentoResponsavel", "telefoneResponsavel", "emailResponsavel", "cep", "endereco", "bairro", "numero"];
 
         for(var i = 0; i < campos.length; i++){
             var campo = campos[i];
             if(aluno[campo].length == 0){
-                erros.push(campo + " não pode ser em branco")
+                camposComErro.push(campo)
             }
         }
 
-        return erros;
+        return camposComErro;
     }
 
-    function exibeMensagensDeErro(erros) {
-        var ul = document.querySelector("#mensagens-erro");
+    function exibeMensagensDeErro(camposComErro) {
+        var inputs = document.getElementsByTagName("input");
+        for(var i = 0; i < camposComErro.length; i++){
+            var campo = camposComErro[i];
+            var inputElement = document.getElementById([campo]);
+            inputElement.style.border = "2px solid red";
+        }
+        for(var j = 0; j < inputs.length; j++){
+            var input = inputs[j];
+            // Verifica se o input não está vazio e remove os estilos de erro
+            if (input.value.trim() !== "") {
+                input.style.border = ""; // Remove a borda vermelha
+            }
+        }
+        /*var ul = document.querySelector("#mensagens-erro");
         ul.innerHTML = "";
     
         erros.forEach(function(erro) {
             var li = document.createElement("li");
             li.textContent = erro;
             ul.appendChild(li);
-        });
+        });*/
     }
 
 
