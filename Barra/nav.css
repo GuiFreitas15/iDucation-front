@@ -2,9 +2,9 @@
 .column {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     float: left;
-    width: 33.33%;
     padding: 0 10px;
     box-sizing: border-box;
+    margin: 0 auto;
 }
 /* Limpa a flutuação após as colunas */
 .row:after {
@@ -18,6 +18,22 @@ fieldset {
     padding: 20px;
     margin-bottom: 20px;
 }
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .column a {
     color: gray;
     text-decoration: none;

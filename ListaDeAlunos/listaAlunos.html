@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+</head>
+
+<body>
+    <script src="../Barra/nav.js"></script>
+    <main>
+        <section class="container">
+            <h2>Alunos</h2>
+            <label for="filtrar-tabela">Filtre:</label>
+            <input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do paciente">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nº do contrato</th>
+                        <th>Nome do aluno</th>
+                        <th>Curso</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-pacientes">
+                    <tr class="aluno" id="primeiro-paciente">
+                        <td class="info-numero">01</td>
+                        <td class="info-nome">Abner Gabriel</td>
+                        <td class="info-curso">Inglês</td>
+                    </tr>
+                    <tr class="aluno"> 
+                        <td class="info-numero">02</td>
+                        <td class="info-nome">Ana Carolina</td>
+                        <td class="info-curso">Inglês</td>
+                    </tr>
+
+                    <tr class="aluno">
+                        <td class="info-numero">03</td>
+                        <td class="info-nome">Kauã Jorge</td>
+                        <td class="info-curso">Gestão empresarial</td>
+                    </tr>
+
+                    <tr class="aluno">
+                        <td class="info-numero">04</td>
+                        <td class="info-nome">Thaina Flex</td>
+                        <td class="info-curso">Gestão empresarial</td>
+                    </tr>
+                    <tr class="aluno">
+                        <td class="info-numero">05</td>
+                        <td class="info-nome">Isabella Muriel</td>
+                        <td class="info-curso">Informática</td>
+                    </tr>
+                </tbody>
+            </table>
+            <span id="erro-ajax" class="invisivel">Erro ao buscar os alunos</span>
+
+            <button id="buscar-alunos" class="botao bto-principal">Buscar alunos</button>
+
+            <script src="listaAlunos.js" ></script>
+</body>
+</html>
