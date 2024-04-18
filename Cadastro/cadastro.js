@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
+
+    var estadoDaPagina = "editando";
+    trocaEntreFormECadastro();
+
     var botaoEnviar = document.querySelector("#botaoEnviar");
 
     botaoEnviar.addEventListener("click", function(event){
@@ -17,10 +21,31 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        form.reset();
+        // form.reset();
 
-        mensagemErro.innerHTML = "";
+        trocaEntreFormECadastro();
     });
+
+    function trocaEntreFormECadastro(){
+        console.log("CHAMANDO A FUNÇÃO DE EXIBIR CAMPOS")
+        var campos = document.querySelectorAll(".editando, .salvo");
+
+        for (var i = 0; i < campos.length; i++) {
+            var campo = campos[i];
+
+            // Verifica se o elemento possui a classe "editando"
+            if (campo.classList.contains(estadoDaPagina)) {
+                campo.style.display = "block";
+            } else {
+                campo.style.display = "none";
+            }
+        }
+    }
+
+    function defineEstadoDaPagina(estado){
+        estadoDaPagina = estado;
+        return estado;
+    }
 
     function obtemAlunoDoFormulario(form){
         var aluno = {
@@ -55,6 +80,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 camposComErro.push(campo)
             }
         }
+
+        defineEstadoDaPagina("salvo");
 
         return camposComErro;
     }
@@ -126,6 +153,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Salve os dados na sessão do usuário
         sessionStorage.setItem("dadosDoFormulario", dadosJSON);
+
+        
     }
 
     // Função para carregar e exibir os dados salvos do formulário
