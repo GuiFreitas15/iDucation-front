@@ -10,17 +10,22 @@
     <nav>
         <fieldset>
             <div class="row">
-                <div class="column">
+                <div class="columnNav">
                     <a href="../Inicio/inicio.html">Página Inicial</a>
                 </div>
-                <div class="column">
-                    <a href="../ListaDeAlunos/listaAlunos.html">Alunos</a>
+                <div class="columnNav">
+                    <div class="dropdown">
+                        <button class="dropbtn">Alunos
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="../ListaDeAlunos/listaAlunos.html">Alunos</a>
+                            <a href="../Cadastro/cadastro.html">Cadastro de Aluno</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="column">
+                <div class="columnNav">
                     <a href="../Sobre/sobre.html">Sobre</a>
-                </div>
-                <div class="column">
-                    <a href="../Cadastro/cadastro.html">Cadastro de Aluno</a>
                 </div>
             </div>
         </fieldset>
