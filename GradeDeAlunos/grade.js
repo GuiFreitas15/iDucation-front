@@ -1,3 +1,33 @@
+// {1, João, 08h, segunda-feira}, {2, João, 09h, segunda-feira}, {3, Maria, 08h, segunda-feira}, {4, Maria, 09h, segunda-feira}, {5, José, 08h, segunda-feira}, {6, Gustavo, 09h, segunda-feira}, {7, Jennifer, 10h, segunda-feira}
+
+// { 08h: "João", 09h: “João”, 10h: "Jennifer" }, 
+// { 08h: "Maria", 09h: “Maria”, 10h: "" },
+// { 08h: "José", 09h: “”, 10h: "" },
+// { 08h: "Gustavo", 09h: “”, 10h: "" },
+
+// { 08h: "João", 08h: "Maria", 08h: "José", 08h: "Gustavo" }, 
+// { 09h: “João”, 09h: “Maria” },
+// { 10h: “Jennifer”}
+
+
+var dadosBanco = [
+    [1, 'João', '08h', 'segunda-feira'], [2, 'João', '09h', 'segunda-feira'], [3, 'Maria', '08h', 'segunda-feira'], [4, 'Maria', '09h', 'segunda-feira'], [5, 'José', '08h', 'segunda-feira'], [6, 'Gustavo', '08h', 'segunda-feira'], [7, 'Jennifer', '10h', 'segunda-feira']  
+]
+
+const horarios = [];
+var lista8h = [];
+var lista9h = [];
+var lista10h = [];
+let test = dadosBanco.map((item) => 
+    {if(item[2] == '08h'){lista8h.push(`08h:${item[1]}`)}
+    else if(item[2] == '09h'){lista9h.push(`09h:${item[1]}`)}
+    else if(item[2] == '10h'){lista10h.push(`10h:${item[1]}`)}
+});
+horarios.push(lista8h);
+horarios.push(lista9h);
+horarios.push(lista10h);
+console.log(horarios);
+
 const dadosSegunda = [
     { nome: 'João', horario:"08h"},
     { nome: 'Maria', horario:"09h"},
